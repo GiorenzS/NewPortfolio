@@ -3,12 +3,10 @@ import heroImage from '../assets/image.jpg';
 function Hero() {
   return (
     <section id="home" className="hero">
-
       <div className="hero-content">
-
         <p>Hello, I'm</p>
 
-        <h1>Your Name</h1>
+        <h1 className="text-gray-700">Your Name</h1>
 
         <h2>IT Student & Developer</h2>
 
@@ -26,7 +24,6 @@ function Hero() {
             Contact Me
           </a>
         </div>
-
       </div>
 
       <div className="hero-image">
@@ -35,7 +32,6 @@ function Hero() {
           alt="Your Name"
         />
       </div>
-
     </section>
   );
 }
