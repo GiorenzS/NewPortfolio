@@ -9,18 +9,14 @@ function Navbar() {
 
   return (
     <>
-      {/* ============================= */}
-      {/* DESKTOP NAVBAR */}
-      {/* ============================= */}
-
       <nav className="fixed left-1/2 top-0 z-50 hidden w-[calc(100%-1rem)] max-w-255.5 -translate-x-1/2 p-2 lg:block">
 
-        <div className="flex items-center justify-between rounded-full bg-[#111111] p-3.5 shadow-lg">
+       <div className="flex items-center justify-between rounded-full border border-black/25 bg-white/50 p-2.5 backdrop-blur shadow-lg">
 
           {/* Logo */}
           <a
             href="#home"
-            className="ml-6 inline-block text-white no-underline transition-transform duration-200 hover:scale-105"
+            className="ml-6 inline-block text-black no-underline transition-transform duration-200 hover:scale-115"
           >
             <span className="text-xl font-medium">
               Gio.S
@@ -33,21 +29,21 @@ function Navbar() {
 
             <a
               href="#about"
-              className="relative inline-block text-[20px] text-white transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              className="relative inline-block text-[18px] text-black transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
             >
               About
             </a>
 
             <a
               href="#projects"
-              className="relative inline-block text-[20px] text-white transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              className="relative inline-block text-[18px] text-black transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
             >
               Projects
             </a>
 
             <a
               href="#experience"
-              className="relative inline-block text-[20px] text-white transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              className="relative inline-block text-[18px] text-black transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
             >
               Experience
             </a>
@@ -58,7 +54,7 @@ function Navbar() {
           {/* Contact */}
           <a
             href="#contact"
-            className="mr-2 rounded-full bg-white px-4 py-1.5 text-[20px] text-black transition-transform duration-200 hover:scale-105"
+            className="mr-2 rounded-full inline-block bg-[#111111] px-4 py-1.5 text-[16px] text-white transition-transform duration-500 hover:scale-105"
           >
             Contact Me
           </a>
