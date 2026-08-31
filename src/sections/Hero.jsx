@@ -6,9 +6,7 @@ function Hero() {
       <div className="hero-content">
         <p>Hello, I'm</p>
 
-        <h1 className="text-gray-700">Your Name</h1>
-
-        <h2>IT Student & Developer</h2>
+        <h1>IT Student & Developer</h1>
 
         <p>
           I create web applications and software while
