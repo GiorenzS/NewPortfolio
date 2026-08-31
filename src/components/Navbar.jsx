@@ -1,51 +1,186 @@
+import { useState } from 'react';
+
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="fixed -mt-2.75 left-1/2 z-50 w-280 -translate-x-1/2 p-4">
-      
-      <div className="flex items-center justify-between rounded-full bg-[#111111] p-3.5 shadow-lg">
+    <>
+      {/* ============================= */}
+      {/* DESKTOP NAVBAR */}
+      {/* ============================= */}
 
-        <a
-          href="#home" className="text-white ml-6 no-underline inline-block transition-transform duration-200 hover:scale-115">
-          <span className="text-lg font-medium">
-            Gio.S
-          </span>
-        </a>
+      <nav className="fixed left-1/2 top-0 z-50 hidden w-[calc(100%-1rem)] max-w-255.5 -translate-x-1/2 p-2 lg:block">
 
-        <div className="hidden items-center gap-9 md:flex ">
+        <div className="flex items-center justify-between rounded-full bg-[#111111] p-3.5 shadow-lg">
 
+          {/* Logo */}
           <a
-            href="#about"
-            className="relative text-20px text-white inline-block transition-transform hover:opacity-65 duration-35 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            href="#home"
+            className="ml-6 inline-block text-white no-underline transition-transform duration-200 hover:scale-105"
           >
-            About
+            <span className="text-xl font-medium">
+              Gio.S
+            </span>
           </a>
 
-          <a
-            href="#projects"
-            className="relative text-20px text-white inline-block transition-transform hover:opacity-65 duration-35 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
-          >
-            Projects
-          </a>
 
+          {/* Navigation */}
+          <div className="flex items-center gap-6 xl:gap-9">
+
+            <a
+              href="#about"
+              className="relative inline-block text-[20px] text-white transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              About
+            </a>
+
+            <a
+              href="#projects"
+              className="relative inline-block text-[20px] text-white transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Projects
+            </a>
+
+            <a
+              href="#experience"
+              className="relative inline-block text-[20px] text-white transition-opacity duration-300 hover:opacity-65 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Experience
+            </a>
+
+          </div>
+
+
+          {/* Contact */}
           <a
-            href="#experience"
-            className="relative text-20px text-white inline-block transition-transform hover:opacity-65 duration-35 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            href="#contact"
+            className="mr-2 rounded-full bg-white px-4 py-1.5 text-[20px] text-black transition-transform duration-200 hover:scale-105"
           >
-            Experience
+            Contact Me
           </a>
 
         </div>
 
-        <a
-          href="#contact"
-          className="rounded-full bg-[#ffffff] px-4 py-1.5 text-20 text-black transition-transform duration-200 hover:scale-105"
+      </nav>
+
+
+      {/* ============================= */}
+      {/* MOBILE / TABLET MENU BUTTON */}
+      {/* ============================= */}
+
+      <div className="fixed right-4 top-4 z-60 lg:hidden">
+
+        <button
+          type="button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="flex h-12 w-12 items-center justify-center"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
         >
-          Contact Me
-        </a>
+
+          <div className="flex flex-col gap-1.5">
+
+          <span
+            className={`block h-0.5 w-5 transition-all duration-300 ${
+              isMenuOpen
+                ? 'bg-white translate-y-2 rotate-45'
+                : 'bg-black'
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-5 transition-all duration-300 ${
+              isMenuOpen
+                ? 'bg-white opacity-0'
+                : 'bg-black'
+            }`}
+          />
+
+          <span
+            className={`block h-0.5 w-5 transition-all duration-300 ${
+              isMenuOpen
+                ? 'bg-white -translate-y-2 -rotate-45'
+                : 'bg-black'
+            }`}
+          />
+
+          </div>
+
+        </button>
 
       </div>
 
-    </nav>
+
+      {/* ============================= */}
+      {/* FULL SCREEN MOBILE MENU */}
+      {/* ============================= */}
+
+      <div
+        className={`fixed inset-0 z-50 bg-[#111111] transition-all duration-500 lg:hidden ${
+          isMenuOpen
+            ? 'visible opacity-100'
+            : 'invisible opacity-0'
+        }`}
+      >
+
+        <div className="flex min-h-screen flex-col items-center justify-center gap-8">
+
+          {/* Logo */}
+          <a
+            href="#home"
+            onClick={closeMenu}
+            className="mb-8 text-3xl font-medium text-white"
+          >
+            Gio.S
+          </a>
+
+
+          {/* About */}
+          <a
+            href="#about"
+            onClick={closeMenu}
+            className="text-3xl font-medium text-white transition-opacity duration-300 hover:opacity-60"
+          >
+            About
+          </a>
+
+
+          {/* Projects */}
+          <a
+            href="#projects"
+            onClick={closeMenu}
+            className="text-3xl font-medium text-white transition-opacity duration-300 hover:opacity-60"
+          >
+            Projects
+          </a>
+
+
+          {/* Experience */}
+          <a
+            href="#experience"
+            onClick={closeMenu}
+            className="text-3xl font-medium text-white transition-opacity duration-300 hover:opacity-60"
+          >
+            Experience
+          </a>
+
+
+          {/* Contact */}
+          <a
+            href="#contact"
+            onClick={closeMenu}
+            className="mt-4 rounded-full bg-white px-7 py-3 text-xl font-medium text-black transition-transform duration-200 hover:scale-105"
+          >
+            Contact Me
+          </a>
+
+        </div>
+
+      </div>
+    </>
   );
 }
 
