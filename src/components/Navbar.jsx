@@ -13,7 +13,6 @@ function Navbar() {
 
        <div className="flex items-center justify-between rounded-full border border-black/25 bg-white/50 p-2.5 backdrop-blur shadow-lg">
 
-          {/* Logo */}
           <a
             href="#home"
             className="ml-6 inline-block text-black no-underline transition-transform duration-200 hover:scale-115"
@@ -23,8 +22,6 @@ function Navbar() {
             </span>
           </a>
 
-
-          {/* Navigation */}
           <div className="flex items-center gap-6 xl:gap-9">
 
             <a
@@ -50,8 +47,6 @@ function Navbar() {
 
           </div>
 
-
-          {/* Contact */}
           <a
             href="#contact"
             className="mr-2 rounded-full inline-block bg-[#111111] px-4 py-1.5 text-[16px] text-white transition-transform duration-500 hover:scale-105"
@@ -62,11 +57,6 @@ function Navbar() {
         </div>
 
       </nav>
-
-
-      {/* ============================= */}
-      {/* MOBILE / TABLET MENU BUTTON */}
-      {/* ============================= */}
 
       <div className="fixed right-4 top-4 z-60 lg:hidden">
 
@@ -109,11 +99,6 @@ function Navbar() {
 
       </div>
 
-
-      {/* ============================= */}
-      {/* FULL SCREEN MOBILE MENU */}
-      {/* ============================= */}
-
       <div
         className={`fixed inset-0 z-50 bg-[#111111] transition-all duration-500 lg:hidden ${
           isMenuOpen
@@ -124,7 +109,6 @@ function Navbar() {
 
         <div className="flex min-h-screen flex-col items-center justify-center gap-8">
 
-          {/* Logo */}
           <a
             href="#home"
             onClick={closeMenu}
@@ -133,8 +117,6 @@ function Navbar() {
             Gio.S
           </a>
 
-
-          {/* About */}
           <a
             href="#about"
             onClick={closeMenu}
@@ -143,8 +125,6 @@ function Navbar() {
             About
           </a>
 
-
-          {/* Projects */}
           <a
             href="#projects"
             onClick={closeMenu}
@@ -153,8 +133,6 @@ function Navbar() {
             Projects
           </a>
 
-
-          {/* Experience */}
           <a
             href="#experience"
             onClick={closeMenu}
@@ -163,8 +141,6 @@ function Navbar() {
             Experience
           </a>
 
-
-          {/* Contact */}
           <a
             href="#contact"
             onClick={closeMenu}
