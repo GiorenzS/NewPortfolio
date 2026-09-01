@@ -9,10 +9,10 @@ const SOCIAL_LINKS = [
 function Hero() {
   return (
     <section id="home" className="flex min-h-screen items-center justify-center px-4 py-24">
-      <div className="flex w-full max-w-5xl flex-col items-center gap-16 lg:flex-row lg:justify-between">
+      <div className="flex w-full max-w-5xl flex-col items-center gap-25 lg:flex-row lg:items-start lg:justify-between">
         
         {/* Image Section */}
-        <div className="relative w-full max-w-[420px] shrink-0">
+        <div className="relative mt-10 w-full max-w-[420px] shrink-20">
           
           {/* Shadow Layer */}
           <div className="absolute inset-0 translate-x-2 translate-y-2 bg-gray-500" />
@@ -52,13 +52,20 @@ function Hero() {
         </div>
 
         {/* Text Content */}
-        <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-5xl font-medium tracking-tight text-[#222] md:text-6xl">
-            IT Student &amp; Developer
+        <div className="flex-1 mt-10 text-center lg:text-left">
+          <h1 className="text-7xl font-bold tracking-tight text-[#2e2e2e] md:text-5xl">
+            Giorenz Sanguillosa
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-700">
-            I create web applications and software while continuously developing my skills.
+          <h2 className="text-2xl font-medium tracking-tight text-[#222] md:text-6xl">
+            Aspiring Backend Developer
+          </h2>
+
+          <p className="max-w-1xl text-lg leading-relaxed text-gray-700">
+            I create web applications and software, drawing on hands-on project experience to continuously strengthen my back-end and database management skills.
+            <br />
+            <br />
+            Right now, I am still currently studying and learning more about back-end development, but I am also open to exploring front-end development and other areas of software development.
           </p>
 
           {/* CTA Buttons */}
