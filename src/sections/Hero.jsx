@@ -54,7 +54,7 @@ function Hero() {
         {/* Text Content */}
         <div className="flex-1 mt-10 text-center lg:text-left">
           <h1 className="text-7xl font-bold tracking-tight text-[#2e2e2e] md:text-5xl">
-            Giorenz Sanguillosa
+            <span className="font-name">Giorenz</span> Sanguillosa
           </h1>
 
           <h2 className="text-2xl font-medium tracking-tight text-[#222] md:text-6xl">

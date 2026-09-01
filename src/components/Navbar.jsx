@@ -17,7 +17,7 @@ function Navbar() {
             href="#home"
             className="ml-6 inline-block text-black no-underline transition-transform duration-200 hover:scale-115"
           >
-            <span className="text-xl font-medium">
+            <span className="text-xl font-logo">
               Gio.S
             </span>
           </a>
