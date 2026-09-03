@@ -43,9 +43,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "NormalFont";
+  src: url('../assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype'),
+       url('../assets/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @theme {
   --font-logo: "LogoFont";
   --font-name: "NameFont";
+  --font-normal: "NormalFont";
 }
 
 @media (max-width: 1024px) {
