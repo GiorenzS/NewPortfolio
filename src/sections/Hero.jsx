@@ -55,7 +55,7 @@ function Hero() {
           </h1>
 
           {/* Title */}
-          <h2 className="mt-2 text-xl font-medium leading-tight tracking-tight text-[#222] sm:text-2xl md:text-3xl lg:text-5xl">
+          <h2 className="mt-2 text-2xl font-medium leading-tight tracking-tight text-[#222] sm:text-2xl md:text-3xl lg:text-2xl">
             Aspiring Backend Developer
           </h2>
 
