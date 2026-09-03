@@ -51,10 +51,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "DesignFont";
+  src: url('../assets/fonts/AlexBrush-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   --font-logo: "LogoFont";
   --font-name: "NameFont";
   --font-normal: "NormalFont";
+  --font-design: "DesignFont";
 }
 
 @media (max-width: 1024px) {
